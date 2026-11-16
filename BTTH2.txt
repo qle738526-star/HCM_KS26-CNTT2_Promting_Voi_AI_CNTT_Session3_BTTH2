@@ -10,6 +10,9 @@ A - Action: Quét qua phản hồi khách hàng, phân loại và chuẩn hóa d
 * Nếu phản hồi bị trống hoặc chứa ký tự đặc biệt không đọc được, trả về tag "Invalid".
 * Không sử dụng bất kỳ định dạng văn bản trang trí nào ngoài JSON thô, không viết thêm câu giải thích ở đầu hoặc cuối.
 T - Tone: Chính xác, khách quan, không thêm thắt văn phong cảm xúc. E - Extras: Tuân thủ chính xác định dạng đầu ra theo 3 ví dụ Few-shot mẫu (cặp dữ liệu Input phản hồi thô -> Output mong muốn):
+
 Ví dụ 1: Input: "Trời ơi ưng quá chừng luôn! Áo vải dày dặn mặc mát lắm, nhân viên tư vấn cũng nhiệt tình nữa. Cho shop 5 sao!" Output: { "sentiment": "Positive", "topics": ["Product", "Service"], "score": 5, "summary": "Sản phẩm chất lượng tốt và nhân viên tư vấn nhiệt tình" }
+
 Ví dụ 2: Input: "Ối dồi ôi thất vọng thật sự! Giao hàng thì nhanh đấy nhưng mở ra hộp sản phẩm bị móp méo hết cả, không dùng được." Output: { "sentiment": "Negative", "topics": ["Product", "Delivery"], "score": 2, "summary": "Giao hàng nhanh nhưng sản phẩm bị móp méo" }
+
 Ví dụ 3: Input: "App thỉnh thoảng hơi chậm lúc thanh toán, nhưng nhìn chung vẫn đặt hàng thành công. Mọi thứ ở mức tạm ổn." Output: { "sentiment": "Neutral", "topics": ["System"], "score": 3, "summary": "Ứng dụng hơi chậm khi thanh toán nhưng vẫn đặt hàng được" }
